@@ -5,7 +5,7 @@ from sklearn.cluster import KMeans
 
 st.title("Customer Segmentation using K-Means")
 
-data = pd.read_csv("Customer_Segmentation\Mall_Customers.csv")
+data = pd.read_csv("Mall_Customers.csv")
 
 st.write("Dataset Preview")
 st.write(data.head())

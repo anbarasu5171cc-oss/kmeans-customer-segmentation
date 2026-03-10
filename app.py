@@ -10,6 +10,11 @@ data = pd.read_csv("Mall_Customers.csv")
 st.write("Dataset Preview")
 st.write(data.head())
 
+data.rename(columns={
+    "Annual Income (k$)": "Annual_Income",
+    "Spending Score (1-100)": "Spending_Score"
+}, inplace=True)
+
 X = data[['Annual_Income','Spending_Score']]
 
 k = st.slider("Select number of clusters",2,10,5)
